@@ -38,3 +38,30 @@
 ### Get max/min/mean value for a column
 
 `max_value = df.agg({"_c0": “max”}).collect()[0]`
+
+### Connect to EMR Cluster from CLI
+
+`ssh -i jornaya.pem hadoop@ip.ip.ip.ip`
+
+### Screen
+
+* Create a new screen: `screen -S aranjan`
+* Go into specific screen: `screen -rd aranjan`
+* Nested screen: `screen -t aman`
+
+### Secure copy a file from local to hadoop
+
+`scp -i jornaya.pem file_path hadoop@ip.ip.ip.ip:/home/hadoop/`
+
+### extract .gz file
+
+`gunzip *`
+
+### Download bucket object from s3
+`aws s3 cp s3://.. . --recursive`
+
+### Add extension to file
+`for f in *; do mv "$f" "$f.gz"; done`
+
+### Find a file in Linux
+`$ sudo find . -name <file_name>`
