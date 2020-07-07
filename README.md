@@ -1,11 +1,4 @@
-### Rename files in S3
-
-`for f in $(aws s3api list-objects --bucket bucket_name --prefix "key/" --delimiter "/" | grep 097 | cut -d : -f 2 | cut -d \" -f 2);  do aws s3 mv s3://bucket_name/$f s3://bucket_name/${f/%/.csv.gz}; done `
-
-### Sync files at two S3 locations
-
-`aws s3 sync s3_source s3_target --recursive`
-
+# PySpark
 ### Drop Columns from Spark DataFrame
 
 `df = df.drop("query_type").drop("_c0").drop("_c01")`
@@ -31,14 +24,43 @@
 
 `df.filter(lower(col("_c0")).contains('%string_to_find%')).head()`
 
-### Run a job in background on Linux
-
-`nohup command > my.log 2>&1 &`
-
 ### Get max/min/mean value for a column
 
 `max_value = df.agg({"_c0": “max”}).collect()[0]`
 
+# Linux
+### Run a job in background on Linux
+
+`nohup command > my.log 2>&1 &`
+
+### extract .gz file
+
+`gunzip *`
+
+### Add extension to file
+`for f in *; do mv "$f" "$f.gz"; done`
+
+### Find a file in Linux
+`$ sudo find . -name <file_name>`
+
+### Check IP to whitelist
+`curl ifconfig.me ; echo`
+
+# AWS
+
+## S3
+### Rename files in S3
+
+`for f in $(aws s3api list-objects --bucket bucket_name --prefix "key/" --delimiter "/" | grep 097 | cut -d : -f 2 | cut -d \" -f 2);  do aws s3 mv s3://bucket_name/$f s3://bucket_name/${f/%/.csv.gz}; done `
+
+### Sync files at two S3 locations
+
+`aws s3 sync s3_source s3_target --recursive`
+
+### Download bucket object from s3
+`aws s3 cp s3://.. . --recursive`
+
+## EMR
 ### Connect to EMR Cluster from CLI
 
 `ssh -i jornaya.pem hadoop@ip.ip.ip.ip`
@@ -51,21 +73,9 @@
 
 ### Secure copy a file from local to hadoop
 
-`scp -i jornaya.pem file_path hadoop@ip.ip.ip.ip:/home/hadoop/`
+`scp -i file.pem file_path hadoop@ip.ip.ip.ip:/home/hadoop/`
 
-### extract .gz file
-
-`gunzip *`
-
-### Download bucket object from s3
-`aws s3 cp s3://.. . --recursive`
-
-### Add extension to file
-`for f in *; do mv "$f" "$f.gz"; done`
-
-### Find a file in Linux
-`$ sudo find . -name <file_name>`
-
+## EKS
 ### Delete multiple pods
 `kubectl get pods -n default | grep Running | cut -d' ' -f 1 | xargs kubectl delete pod -n default`
 
@@ -86,11 +96,25 @@ kubectl config set-context --current --namespace=<insert-namespace-name-here>
 kubectl config view --minify | grep namespace:
 ```
 
+### Configure EKS
+`aws eks update-kubeconfig --name <cluster_name> --region us-east-1`
+
+### JupyterHub
+`helm repo add stable https://kubernetes-charts.storage.googleapis.com`
+`helm repo update`
+`helm upgrade --install <release_name> jupyterhub/jupyterhub --namespace <name_space> --version=0.9.0 --values config.yaml`
+
 ### Get all pods in an EKS cluster
 `kubectl get pods --all-namespaces`
 
 ### Get airflow UI for airflow pod
 `kubectl port-forward <airflow-pod-name> 8080:8080`
 
+# Python
+
 ### Run Python unittest
 `python -m unittest discover -s /path/to/unittest/lambdas`
+
+### Install Python Libraries
+`python3 -m pip install --user --upgrade "<library_name>"`
+
