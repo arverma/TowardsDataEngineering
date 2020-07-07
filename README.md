@@ -63,7 +63,7 @@
 ## EMR
 ### Connect to EMR Cluster from CLI
 
-`ssh -i jornaya.pem hadoop@ip.ip.ip.ip`
+`ssh -i file.pem hadoop@ip.ip.ip.ip`
 
 ### Screen
 
