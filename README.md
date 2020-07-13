@@ -100,10 +100,11 @@ kubectl config view --minify | grep namespace:
 `aws eks update-kubeconfig --name <cluster_name> --region us-east-1`
 
 ### JupyterHub
-`helm repo add stable https://kubernetes-charts.storage.googleapis.com`
-`helm repo update`
-`helm upgrade --install <release_name> jupyterhub/jupyterhub --namespace <name_space> --version=0.9.0 --values config.yaml`
-
+```
+helm repo add stable https://kubernetes-charts.storage.googleapis.com
+helm repo update
+helm upgrade --install <release_name> jupyterhub/jupyterhub --namespace <name_space> --version=0.9.0 --values config.yaml
+```
 ### Get all pods in an EKS cluster
 `kubectl get pods --all-namespaces`
 
