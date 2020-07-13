@@ -103,6 +103,7 @@ kubectl config view --minify | grep namespace:
 ```
 helm repo add stable https://kubernetes-charts.storage.googleapis.com
 helm repo update
+helm repo add jupyterhub https://jupyterhub.github.io/helm-chart/
 helm upgrade --install <release_name> jupyterhub/jupyterhub --namespace <name_space> --version=0.9.0 --values config.yaml
 ```
 ### Get all pods in an EKS cluster
