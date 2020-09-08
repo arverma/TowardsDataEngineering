@@ -97,6 +97,7 @@ kubectl config view --minify | grep namespace:
 ```
 
 ### Configure EKS
+`export KUBECONFIG=$KUBECONFIG:~/.kube/config-nonprod`
 `aws eks update-kubeconfig --name <cluster_name> --region us-east-1`
 
 ### JupyterHub
