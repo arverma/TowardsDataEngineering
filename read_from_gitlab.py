@@ -1,3 +1,7 @@
+import requests
+import yaml
+
+
 def read_yaml_from_gitlab():
     """
     Read any file content from Gitlab
@@ -6,8 +10,9 @@ def read_yaml_from_gitlab():
     :return: Resurce Yaml Content
     :rtype: dict
     """
+    project_id = "****************"
     url = "https://<host>/api/v4/projects/{project_id}/repository/files/{f}/raw?ref=<branch>".format(
-        project_id=<project_id>, f="path%2Fto%2Ffile%2Eyaml")
+        project_id=project_id, f="path%2Fto%2Ffile%2Eyaml")
     resp = requests.get(url, headers={"Private-Token": "********************"})
     content_file = resp.content
     content_file.decode("utf-8")
