@@ -15,3 +15,13 @@
 
 ### Check IP to whitelist
 `curl ifconfig.me ; echo`
+
+### Change the ownership of a file
+`sudo chown new_owner_name filename`
+
+### Change the group to which a file belong
+`sudo chgrp new_group_name filename`
+
+### Change password for a user named mike
+`sudo passwd mike`
+
