@@ -33,3 +33,6 @@
 
 ### Show status information of a file
 `stat`
+
+### Don't show the command in history
+`<space> command`
