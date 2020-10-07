@@ -24,6 +24,7 @@ Example: `pwd`, `ls` e.t.c., are not allowed
     * Put it inside a directory if applicable
     * Give a proper heading
     * Use markdown script for [block code or inline code]((https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet#code)) to embed commands
-* If the command heading is not sufficent to explain the uses, give 1 liner explanation with an example.
+* If the command heading is not sufficient to explain the uses, give 1 liner explanation with an example.
+* I would be happy to accept your pull request even if you add `one` good command than adding `ten` not so good commands.
 </p>
 </details>
