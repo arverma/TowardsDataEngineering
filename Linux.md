@@ -17,6 +17,9 @@
 13) [Display the word count in a text file](#displayWordCount)
 14) [List running processes in a tree like format](#listRunningProcesses)
 15) [Display the time and date on the top right corner of the terminal](#displayTimeAndDate)
+16) [Search Bash history](#searchBashHistory)
+17) [Moves the cursor to the beginning of the line](#moveCursorToTheBeginning)
+18) [Moves the cursor to the end of the line](#moveCursorToTheEndOfLine)
 
 ### <a name="runAJobInBack"></a> Run a job in background on Linux
 
@@ -100,3 +103,12 @@
 
 ### <a name="displayTimeAndDate"></a> Display the time and date on the top right corner of the terminal
 `while sleep 1;do tput sc;tput cup 0 $(($(tput cols)-29));date;tput rc;done &`
+
+### <a name="searchBashHistory"></a> Search Bash history
+`Ctrl+r`
+
+### <a name="moveCursorToTheBeginning"></a> Moves the cursor to the beginning of the line
+`Ctrl+a`
+
+### <a name="moveCursorToTheEndOfLine"></a> Moves the cursor to the end of the line
+`Ctrl+e`
