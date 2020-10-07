@@ -18,3 +18,18 @@
 
 ### Search Bash history
 `Ctrl+r`
+
+### Clear the terminal Screen
+`Ctrl + L`
+
+### Run previous sudo commmand
+`sudo!!`
+
+### DNS Lookup/Find IP of a website 
+`dig www.websitename.com`
+
+### Randomly select files from a folder
+`shuf`
+
+### Show status information of a file
+`stat`
