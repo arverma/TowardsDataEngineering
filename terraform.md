@@ -16,4 +16,6 @@ terragrunt init
 terragrunt plan
 
 terragrunt apply
+
+terragrunt destroy
 ```
