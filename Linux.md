@@ -17,11 +17,12 @@
 14) [Search Bash history](#searchBashHistory)
 15) [Moves the cursor to the beginning of the line](#moveCursorToTheBeginning)
 16) [Moves the cursor to the end of the line](#moveCursorToTheEndOfLine)
-17) [Clears Terminal Screen](#clearTerminalScreen)
-18) [Run previous command in sudo](#lastSudo)
-19) [Randomly select lines or files from a file or folder](#randomSelect)
-20) [Show status and information a file](#showStat)
-21) [DNS lookup/Find IP of a website](#dnsip)
+17) [Run previous command in sudo](#lastSudo)
+18) [Fire animation on terminal](#burnIt)
+19) [Watch Star Wars in ASCII on terminal](#showSW)
+20) [DNS lookup/Find IP of a website](#dnsip)
+21) [Generate fake identities](#randomFake)
+22) [Show CPU architecture](#showCpu)
 
 ### <a name="runAJobInBack"></a> Run a job in background on Linux
 
@@ -57,7 +58,6 @@
     * -xz - uncompress and extract
     * -v - verbose
     * -f - the filename of the compressed file
-
 ### <a name="gunzip"></a> gunzip
 
 * #### Compress a file with gzip
@@ -102,17 +102,20 @@
 ### <a name="moveCursorToTheEndOfLine"></a> Moves the cursor to the end of the line
 `Ctrl+e`
 
-### <a name="clearTerminalScreen"></a> Clears the screen of terminal 
-`ctrl+L`
-
 ### <a name="lastSudo"></a> Runs Previous Sudo command
-`sudo!!`
+`$!!`
 
-### <a name="randomSelect"></a> Randomly select files or lines from a folder
-`shuf`
+### <a name="burnIt"></a> ASCII art animation that generates a burning fire on the terminal
+`aafire`
 
-### <a name="showStat"></a> Show status and information of a file
-`stat`
+### <a name="showSW"></a> Watch Star Wars in ASCII on terminal
+`telnet towel.blinkenlights.nl`
 
 ### <a name="dnsip"></a> DNS lookup / Find IP of a website
 `dig websitename`
+
+### <a name="randomFake"></a> Generate random and possible fake identites
+`rig`
+
+### <a name="showCpu"></a> Show CPU information and architecture
+`lscpu`
