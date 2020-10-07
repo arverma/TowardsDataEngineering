@@ -17,7 +17,7 @@
 14) [Search Bash history](#searchBashHistory)
 15) [Moves the cursor to the beginning of the line](#moveCursorToTheBeginning)
 16) [Moves the cursor to the end of the line](#moveCursorToTheEndOfLine)
-17) [Run previous command in sudo](#previousSudoCommand)
+17) [Run previous command run in superuser mode](#previousSuperUserCommand)
 18) [Divides Files into Columns](#divideFileColumn)
 
 ### <a name="runAJobInBack"></a> Run a job in background on Linux
@@ -98,7 +98,7 @@
 ### <a name="moveCursorToTheEndOfLine"></a> Moves the cursor to the end of the line
 `Ctrl+e`
 
-### <a name="previousSudoCommand"></a> Runs Previous Sudo command
+### <a name="previousSuperuserCommand"></a> Runs Previous command used as superuser
 `$!!`
 
 ### <a name="divideFileColumn"></a> Divide Files into Columns
