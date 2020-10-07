@@ -22,6 +22,8 @@
 ### Get information about cpu
 `lscpu`
 
-### What files are in the directory you are in
-`ls`
+### How to run command from history by serial number
+`!serial no`
+### To see the real time system process 
+`top`
 
