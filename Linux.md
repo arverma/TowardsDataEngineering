@@ -15,3 +15,6 @@
 
 ### Check IP to whitelist
 `curl ifconfig.me ; echo`
+
+### Search Bash history
+`Ctrl+r`
