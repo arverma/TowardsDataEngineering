@@ -19,11 +19,8 @@
 ### Search Bash history
 `Ctrl+r`
 
-### Get information about cpu
-`lscpu`
-
 ### How to run command from history by serial number
-`!serial no`
+`$!serial-no`
 ### To see the real time system process 
 `top`
 
