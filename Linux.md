@@ -17,6 +17,11 @@
 14) [Search Bash history](#searchBashHistory)
 15) [Moves the cursor to the beginning of the line](#moveCursorToTheBeginning)
 16) [Moves the cursor to the end of the line](#moveCursorToTheEndOfLine)
+17) [Clears Terminal Screen](#clearTerminalScreen)
+18) [Run previous command in sudo](#lastSudo)
+19) [Randomly select lines or files from a file or folder](#randomSelect)
+20) [Show status and information a file](#showStat)
+21) [DNS lookup/Find IP of a website](#dnsip)
 
 ### <a name="runAJobInBack"></a> Run a job in background on Linux
 
@@ -96,3 +101,18 @@
 
 ### <a name="moveCursorToTheEndOfLine"></a> Moves the cursor to the end of the line
 `Ctrl+e`
+
+### <a name="clearTerminalScreen"></a> Clears the screen of terminal 
+`ctrl+L`
+
+### <a name="lastSudo"></a> Runs Previous Sudo command
+`sudo!!`
+
+### <a name="randomSelect"></a> Randomly select files or lines from a folder
+`shuf`
+
+### <a name="showStat"></a> Show status and information of a file
+`stat`
+
+### <a name="dnsip"></a> DNS lookup / Find IP of a website
+`dig websitename`
