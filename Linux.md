@@ -9,17 +9,14 @@
 5) [Find a file in linux](#findAFile)
 6) [Check IP to whitelist](#checkIpToWhitelist)
 7) [Outputs Geographical Information, regarding an ip_address](#outputGeographicalInfo)
-8) [Compare two text files and show the differences](#compareTwoTextFiles)
 9) [Show the available space on the mounted filesystems](#showFilesystemSpace)
 10) [Show the size of a file or a folder](#showSizeOfFile)
 11) [Kill all the instances of a particular program](#killall)
 12) [List the conents of a file in a numbered fashion](#listContentsOfAFile)
-13) [Display the word count in a text file](#displayWordCount)
-14) [List running processes in a tree like format](#listRunningProcesses)
-15) [Display the time and date on the top right corner of the terminal](#displayTimeAndDate)
-16) [Search Bash history](#searchBashHistory)
-17) [Moves the cursor to the beginning of the line](#moveCursorToTheBeginning)
-18) [Moves the cursor to the end of the line](#moveCursorToTheEndOfLine)
+13) [List running processes in a tree like format](#listRunningProcesses)
+14) [Search Bash history](#searchBashHistory)
+15) [Moves the cursor to the beginning of the line](#moveCursorToTheBeginning)
+16) [Moves the cursor to the end of the line](#moveCursorToTheEndOfLine)
 
 ### <a name="runAJobInBack"></a> Run a job in background on Linux
 
@@ -76,13 +73,6 @@
 ### <a name="outputGeographicalInfo"></a> Outputs Geographical Information, regarding an ip_address
 `curl ipinfo.io ; echo`
 
-### <a name="compareTwoTextFiles"></a> Compare two text files and show the differences
-`diff -y -w 50 <file1> <file2> --suppress-common-lines`
-    
-* -y - shows line difference side by side
-* -w - lets us specify the maximum line width to use to avoid wraparound lines
-* -suppress-common-lines - suppress the matching lines, letting us to focus on lines which have differences
-
 ### <a name="showFilesystemSpace"></a> Show the available space on the mounted filesystems
 `df -h`
 
@@ -95,14 +85,8 @@
 ### <a name="listContentsOfAFile"></a> List the conents of a file in a numbered fashion
 `nl <file_name>`
 
-### <a name="displayWordCount"></a> Display the word count in a text file
-`wc -l <file_name>`
-
 ### <a name="listRunningProcesses"></a> List running processes in a tree like format
 `pstree`
-
-### <a name="displayTimeAndDate"></a> Display the time and date on the top right corner of the terminal
-`while sleep 1;do tput sc;tput cup 0 $(($(tput cols)-29));date;tput rc;done &`
 
 ### <a name="searchBashHistory"></a> Search Bash history
 `Ctrl+r`
