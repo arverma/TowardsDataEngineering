@@ -67,10 +67,6 @@
 ### <a name="findAFile"></a> Find a file in Linux
 `$ sudo find . -name <file_name>`
 
-
-### Check IP to whitelist
-`curl ifconfig.me ; echo`
-
 ### <a name="checkIpToWhitelist"></a> Check IP to whitelist
 `curl ifconfig.me ; echo`
 
