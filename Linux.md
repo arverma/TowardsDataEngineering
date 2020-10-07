@@ -18,3 +18,10 @@
 
 ### Search Bash history
 `Ctrl+r`
+
+### Get information about cpu
+`lscpu`
+
+### What files are in the directory you are in
+`ls`
+
