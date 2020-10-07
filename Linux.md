@@ -16,14 +16,14 @@
 ### Check IP to whitelist
 `curl ifconfig.me ; echo`
 
-### Run the previous command in sudo ###
+### Run the previous command in sudo
 `sudo!!`
 
-## display status info of file ##
+### display status info of file 
 `stat`
 
-## DNS Lookup / Find IP of a website ##
+### DNS Lookup / Find IP of a website 
 `dig www.websitename.com`
 
-## Clear the screen of terminal ##
+### Clear the screen of terminal
 `Ctrl  + L `
