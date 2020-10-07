@@ -18,3 +18,9 @@
 
 ### Search Bash history
 `Ctrl+r`
+
+### Moves the cursor to the beginning of the line
+`Ctrl+a`
+
+### Moves the cursor to the end of the line
+`Ctrl+e`
