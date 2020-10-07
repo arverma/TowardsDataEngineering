@@ -104,14 +104,5 @@
 ### <a name="previousSudoCommand"></a> Runs Previous Sudo command
 `$!!`
 
-### <a name="dnsip"></a> DNS lookup / Find IP of a website
-`dig websitename`
-
-### <a name="loggedInUser"></a>Give information of particular user
-`finger username`
-
-### <a name="memoryMap"></a> Display memory map of disk usage
-`pmap`
-
 ### <a name="divideFileColumn"></a> Divide Files into Columns
 `pr - x`
