@@ -17,12 +17,11 @@
 14) [Search Bash history](#searchBashHistory)
 15) [Moves the cursor to the beginning of the line](#moveCursorToTheBeginning)
 16) [Moves the cursor to the end of the line](#moveCursorToTheEndOfLine)
-17) [Run previous command in sudo](#lastSudo)
-18) [Fire animation on terminal](#burnIt)
-19) [Watch Star Wars in ASCII on terminal](#showSW)
-20) [DNS lookup/Find IP of a website](#dnsip)
-21) [Generate fake identities](#randomFake)
-22) [Show CPU architecture](#showCpu)
+17) [Run previous command in sudo](#previousSudoCommand)
+18) [DNS lookup/Find IP of a website](#dnsip)
+19) [Give information of a particular user](#loggedInUser)
+20) [Display memory map of disk usage](#memoryMap)
+21) [Divides Files into Columns](#divideFileColumn)
 
 ### <a name="runAJobInBack"></a> Run a job in background on Linux
 
@@ -102,20 +101,17 @@
 ### <a name="moveCursorToTheEndOfLine"></a> Moves the cursor to the end of the line
 `Ctrl+e`
 
-### <a name="lastSudo"></a> Runs Previous Sudo command
+### <a name="previousSudoCommand"></a> Runs Previous Sudo command
 `$!!`
-
-### <a name="burnIt"></a> ASCII art animation that generates a burning fire on the terminal
-`aafire`
-
-### <a name="showSW"></a> Watch Star Wars in ASCII on terminal
-`telnet towel.blinkenlights.nl`
 
 ### <a name="dnsip"></a> DNS lookup / Find IP of a website
 `dig websitename`
 
-### <a name="randomFake"></a> Generate random and possible fake identites
-`rig`
+### <a name="loggedInUser"></a>Give information of particular user
+`finger username`
 
-### <a name="showCpu"></a> Show CPU information and architecture
-`lscpu`
+### <a name="memoryMap"></a> Display memory map of disk usage
+`pmap`
+
+### <a name="divideFileColumn"></a> Divide Files into Columns
+`pr - x`
