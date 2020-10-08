@@ -18,7 +18,6 @@
 15) [Moves the cursor to the beginning of the line](#moveCursorToTheBeginning)
 16) [Moves the cursor to the end of the line](#moveCursorToTheEndOfLine)
 17) [Run previous command run in superuser mode](#previousSuperuserCommand)
-18) [Divides Files into Columns](#divideFileColumn)
 
 ### <a name="runAJobInBack"></a> Run a job in background on Linux
 
@@ -100,6 +99,3 @@
 
 ### <a name="previousSuperuserCommand"></a> Runs Previous command used as superuser
 `$!!`
-
-### <a name="divideFileColumn"></a> Divide Files into Columns
-`pr - x`
