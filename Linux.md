@@ -17,7 +17,7 @@
 14) [Search Bash history](#searchBashHistory)
 15) [Moves the cursor to the beginning of the line](#moveCursorToTheBeginning)
 16) [Moves the cursor to the end of the line](#moveCursorToTheEndOfLine)
-17) [Run previous command run in superuser mode](#previousSuperuserCommand)
+17) [Run previous ran command](#runPreviousCommand)
 
 ### <a name="runAJobInBack"></a> Run a job in background on Linux
 
@@ -97,5 +97,5 @@
 ### <a name="moveCursorToTheEndOfLine"></a> Moves the cursor to the end of the line
 `Ctrl+e`
 
-### <a name="previousSuperuserCommand"></a> Runs Previous command used as superuser
+### <a name="runPreviousCommand"></a> Runs Previous ran command
 `$!!`
