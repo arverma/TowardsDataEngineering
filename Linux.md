@@ -18,6 +18,8 @@
 15) [Moves the cursor to the beginning of the line](#moveCursorToTheBeginning)
 16) [Moves the cursor to the end of the line](#moveCursorToTheEndOfLine)
 17) [Run previous ran command](#runPreviousCommand)
+18) [Difference between two files](#differenceBetweenFiles)
+19) [Find word in a file](#findWordInAFile)
 
 ### <a name="runAJobInBack"></a> Run a job in background on Linux
 
@@ -99,3 +101,9 @@
 
 ### <a name="runPreviousCommand"></a> Runs Previous ran command
 `$!!`
+
+### <a name="differenceBetweenFiles"></a> Shows difference between two files
+`diff file1.txt file2.txt`
+
+### <a name="findWordInAFile"></a> Find word in a file
+`grep wordiwanttofind file2.txt`
