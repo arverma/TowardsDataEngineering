@@ -19,6 +19,8 @@
 16) [Moves the cursor to the end of the line](#moveCursorToTheEndOfLine)
 17) [Run previous ran command](#runPreviousCommand)
 18) [Find word in a file](#findWordInAFile)
+19) [Prettify print yaml files](#PrettifyfyPrintYamlFiles)
+20) [Prettify print Json files](#PrettifyfyPrintJsonFiles)
 
 ### <a name="runAJobInBack"></a> Run a job in background on Linux
 
@@ -103,3 +105,9 @@
 
 ### <a name="findWordInAFile"></a> Find word in a file
 `grep <wordYouWantToFind> <fileName.txt>`
+
+### <a name="PrettifyfyPrintYamlFiles"></a> Prettify print yaml files
+`python -c 'import sys,yaml,pprint;pprint.pprint(yaml.load(open(<PATH_OF_YAML_FILE>.read(), Loader=yaml.FullLoader))'`
+
+### <a name="PrettifyfyPrintJsonFiles"></a> Prettify print json files
+`python -m json.tool <PATH_OF_JSON_FILE>`
