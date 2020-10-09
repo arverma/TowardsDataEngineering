@@ -1,8 +1,15 @@
 # Python
 
+## Table of Contents
+
+1) [Check your Python version](#checkYourPythonVersion)
+2) [Run Python unittest](#runPythonUnittest)
+3) [Install Python Libraries](#installPythonLibraries)
+4) [Managing Requirements](#managingRequirements)
+
 **Heads up!** Many \*nix OSes (like many Debian-based Linux distributions) require you to use `python3` instead of `python`!
 
-### Check your Python version
+### <a name="checkYourPythonVersion"></a> Check your Python version
 ```bash
 python -V
 ```
@@ -13,18 +20,18 @@ Remember, if that doesn't work, try this instead!
 python3 -V
 ```
 
-### Run Python unittest
+### <a name="runPythonUnittest"></a> Run Python unittest
 ```bash
 python -m unittest discover -s /path/to/unittest/lambdas
 ```
 
-### Install Python Libraries
+### <a name="installPythonLibraries"></a> Install Python Libraries
 
 ```bash
 python -m pip install --user --upgrade "<library_name>"
 ```
 
-### Managing Requirements
+### <a name="managingRequirements"></a> Managing Requirements
 
 **Create a Virtual Environment**
 
