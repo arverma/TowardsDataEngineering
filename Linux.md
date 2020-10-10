@@ -72,7 +72,10 @@
 `curl ifconfig.me ; echo`
 
 ### <a name="outputGeographicalInfo"></a> Outputs Geographical Information, regarding an ip_address
-`curl ipinfo.io ; echo`
+#### for current system's ip address:
+`curl ipinfo.io`
+#### for any specific ip address:
+`curl ipinfo.io/<ip_address>`
 
 ### <a name="showFilesystemSpace"></a> Show the available space on the mounted filesystems
 `df -h`
