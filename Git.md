@@ -5,6 +5,7 @@
 ### Set up ▶️
 This commands will be useful to set up your project/directory
 1) [.gitignore](#ignoringFiles)
+2) [Create branch](#creatingBranches)
 
 ### Lifecycle 🔄
 This commands will be useful in the lifecycle project
@@ -33,6 +34,28 @@ doc/*.txt
 doc/**/*.pdf
 
 ```
+
+## <a name="creatingBranches">Create Branch</a>
+
+1. First, check in which branch you are right now:   
+```
+git branch
+```
+You'll get a list of the branchs available, the branch with an ```*``` next to it, is the branch you are working on.
+
+2. Then, create a new branch:
+```
+git branch name_of_the_branch_to_create
+```
+
+3. Move to the new branch created:
+```
+git checkout name_of_the_branch_to_create
+```
+
+4. You can do step 2 and 3 by one command:
+```
+git checkout -b name_of_the_branch_to_create
 
 -----------
 
