@@ -1,22 +1,18 @@
-## [Modifying Commits](https://classroom.udacity.com/courses/ud123/lessons/f02167ad-3ba7-40e0-a157-e5320a5b0dc8/concepts/e176503b-3eae-4b22-a1b3-2953bab3d5e5)
-#### Changing the last commit message
-`$ git commit --amend`
+# Git
 
-#### Add files to last commit
-* edit the file(s)
-* save the file(s)
-* stage the file(s)
-* and run `git commit --amend`
+## Table of Contents
 
-#### Reverse a previously made commit, undo the changes
-`$ git revert <SHA-of-commit-to-revert>`
+### Set up ▶️
+This commands will be useful to set up your project/directory
+1) [.gitignore](#ignoringFiles)
 
-#### [Reset vs Revert](https://classroom.udacity.com/courses/ud123/lessons/f02167ad-3ba7-40e0-a157-e5320a5b0dc8/concepts/fed81eb7-49b4-4129-9f6b-8201e0796fd8)
-At first glance, resetting might seem coincidentally close to reverting, but they are actually quite different. Reverting creates a new commit that reverts or undos a previous commit. Resetting, on the other hand, erases commits!
+### Lifecycle 🔄
+This commands will be useful in the lifecycle project
+1) [Modifying Commits](#modifyingCommits)
 
-Before I do any resetting, I usually create a backup branch on the most-recent commit so that I can get back to the commits if I make a mistake:
+-----------
 
-## [.gitignore](https://www.toptal.com/developers/gitignore)
+## <a name="ignoringFiles">[.gitignore](https://www.toptal.com/developers/gitignore)</a>
 ```
 # ignore all .a files
 *.a
@@ -37,3 +33,24 @@ doc/*.txt
 doc/**/*.pdf
 
 ```
+
+-----------
+
+## <a name="modifyingCommits">[Modifying Commits](https://classroom.udacity.com/courses/ud123/lessons/f02167ad-3ba7-40e0-a157-e5320a5b0dc8/concepts/e176503b-3eae-4b22-a1b3-2953bab3d5e5)</a>
+
+#### Changing the last commit message
+`$ git commit --amend`
+
+#### Add files to last commit
+* edit the file(s)
+* save the file(s)
+* stage the file(s)
+* and run `git commit --amend`
+
+#### Reverse a previously made commit, undo the changes
+`$ git revert <SHA-of-commit-to-revert>`
+
+#### [Reset vs Revert](https://classroom.udacity.com/courses/ud123/lessons/f02167ad-3ba7-40e0-a157-e5320a5b0dc8/concepts/fed81eb7-49b4-4129-9f6b-8201e0796fd8)
+At first glance, resetting might seem coincidentally close to reverting, but they are actually quite different. Reverting creates a new commit that reverts or undos a previous commit. Resetting, on the other hand, erases commits!
+
+Before I do any resetting, I usually create a backup branch on the most-recent commit so that I can get back to the commits if I make a mistake.
