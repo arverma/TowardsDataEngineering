@@ -107,7 +107,7 @@
 `grep <wordYouWantToFind> <fileName.txt>`
 
 ### <a name="PrettifyfyPrintYamlFiles"></a> Prettify print yaml files
-`python -c 'import yaml,pprint;pprint.pprint(yaml.load(open(<PATH_OF_YAML_FILE>.read(), Loader=yaml.FullLoader))'`
+`python3 -c 'import yaml,pprint;pprint.pprint(yaml.load(open(<PATH_OF_YAML_FILE>.read(), Loader=yaml.FullLoader))'`
 
 ### <a name="PrettifyfyPrintJsonFiles"></a> Prettify print json files
-`python -m json.tool <PATH_OF_JSON_FILE>`
+`python3 -m json.tool <PATH_OF_JSON_FILE>`
