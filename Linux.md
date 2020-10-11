@@ -21,6 +21,7 @@
 18) [Find word in a file](#findWordInAFile)
 19) [Prettify print yaml files](#PrettifyfyPrintYamlFiles)
 20) [Prettify print Json files](#PrettifyfyPrintJsonFiles)
+21) [Graphical git log of commits](#GraficalGitLog)
 
 ### <a name="runAJobInBack"></a> Run a job in background on Linux
 
@@ -116,3 +117,5 @@
 ### <a name="PrettifyfyPrintJsonFiles"></a> Prettify print json files
 `python3 -m json.tool <PathToFile.Json>`
 
+### <a name="GraficalGitLog"></a> Graphical git log of commits
+`git log --oneline --all --graph --decorate $*`
