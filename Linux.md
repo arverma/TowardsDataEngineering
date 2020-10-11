@@ -74,7 +74,10 @@
 `curl ifconfig.me ; echo`
 
 ### <a name="outputGeographicalInfo"></a> Outputs Geographical Information, regarding an ip_address
-`curl ipinfo.io ; echo`
+#### for current system's ip address:
+`curl ipinfo.io`
+#### for any specific ip address:
+`curl ipinfo.io/<ip_address>`
 
 ### <a name="showFilesystemSpace"></a> Show the available space on the mounted filesystems
 `df -h`
@@ -106,8 +109,10 @@
 ### <a name="findWordInAFile"></a> Find word in a file
 `grep <wordYouWantToFind> <fileName.txt>`
 
+
 ### <a name="PrettifyfyPrintYamlFiles"></a> Prettify print yaml files
 `python3 -c 'import yaml;print(yaml.safe_load(open("<pathToFile.yaml>")))'`
 
 ### <a name="PrettifyfyPrintJsonFiles"></a> Prettify print json files
 `python3 -m json.tool <PathToFile.Json>`
+
