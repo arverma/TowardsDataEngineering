@@ -8,17 +8,19 @@
 `df.write.mode("overwrite").format("csv").option("compression", ".gzip").save(output_s3_path_in_string, header=True)`
 
 ### Validation Steps
-`df_new = spark.read.csv("s3://leadid-sandbox/aranjan/mysql_leads_new")`
+```python
+>>> df_new = spark.read.csv("s3://leadid-sandbox/aranjan/mysql_leads_new")
 
-`df_old = spark.read.option("delimiter", "\x01").csv("s3://..")`
+>>> df_old = spark.read.option("delimiter", "\x01").csv("s3://..")
 
-`df_new.count()`
+>>> df_new.count()
 
-`df_intersect = df_old.intersect(df_new)`
+>>> df_intersect = df_old.intersect(df_new)
 
-`df_subtract = df_old.subtract(df_intersect)`
+>>> df_subtract = df_old.subtract(df_intersect)
 
-`df_new.filter(df_new._c0 == "").filter(df_new._c1 == "").head()`
+>>> df_new.filter(df_new._c0 == "").filter(df_new._c1 == "").head()
+```
 
 ### Select records with specific string in columns
 
