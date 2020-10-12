@@ -1,4 +1,4 @@
-# Python
+# Python3
 
 ## Table of Contents
 
@@ -6,29 +6,25 @@
 2) [Run Python unittest](#runPythonUnittest)
 3) [Install Python Libraries](#installPythonLibraries)
 4) [Managing Requirements](#managingRequirements)
-
-**Heads up!** Many \*nix OSes (like many Debian-based Linux distributions) require you to use `python3` instead of `python`!
+5) [Prettify print yaml files](#PrettifyfyPrintYamlFiles)
+6) [Prettify print json files](#PrettifyfyPrintJsonFiles)
+7) [Read file from Gitlab private repo](Python%20Script/read_from_gitlab.py)
+8) [Read parquet file](Python%20Script/read_parquet_file.py)
 
 ### <a name="checkYourPythonVersion"></a> Check your Python version
 ```bash
-python -V
-```
-
-Remember, if that doesn't work, try this instead!
-
-```bash
-python3 -V
+$ python3 -V
 ```
 
 ### <a name="runPythonUnittest"></a> Run Python unittest
 ```bash
-python -m unittest discover -s /path/to/unittest/lambdas
+$ python3 -m unittest discover -s /path/to/unittest/lambdas
 ```
 
 ### <a name="installPythonLibraries"></a> Install Python Libraries
 
 ```bash
-python -m pip install --user --upgrade "<library_name>"
+$ python3 -m pip install --user --upgrade "<library_name>"
 ```
 
 ### <a name="managingRequirements"></a> Managing Requirements
@@ -36,23 +32,33 @@ python -m pip install --user --upgrade "<library_name>"
 **Create a Virtual Environment**
 
 ```bash
-python -m venv venv
+$ python3 -m venv venv
 ```
 
 **Activate a Virtual Environment** - _Linux_
 ```bash
-source venv/bin/activate
+$ source venv/bin/activate
 ```
 
 
 **Creating a requirements.txt file**
 
 ```bash
-python -m pip freeze > requirements.txt
+$ python3 -m pip freeze > requirements.txt
 ```
 
 **Installing a requirements.txt file**
 
 ```bash
-python -m pip install -r requirements.txt
+$ python3 -m pip install -r requirements.txt
+```
+
+### <a name="PrettifyfyPrintYamlFiles"></a> Prettify print yaml files
+```bash
+$ python3 -c 'import yaml;print(yaml.safe_load(open("<pathToFile.yaml>")))'`
+```
+
+### <a name="PrettifyfyPrintJsonFiles"></a> Prettify print json files
+```bash
+$ python3 -m json.tool <PathToFile.Json>`
 ```
