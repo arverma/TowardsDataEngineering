@@ -17,6 +17,7 @@
 14) [Moves the cursor to the end of the line](#moveCursorToTheEndOfLine)
 15) [Run previous ran command](#runPreviousCommand)
 16) [Find word in a file](#findWordInAFile)
+16) [Search For apt package](#searchAptPackage)
 
 #### <a name="runAJobInBack"></a> Run a job in background on Linux
 
@@ -139,3 +140,7 @@ $ !!
 $ grep <wordYouWantToFind> <fileName.txt>
 ```
 
+#### <a name="searchAptPackage"></a> Search any apt package
+```bash
+$ apt-cache search <keyword>
+```
