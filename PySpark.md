@@ -1,4 +1,14 @@
 # PySpark
+
+### Create Dataframe
+```
+spark = SparkSession.builder.appName('SparkByExamples.com').getOrCreate()
+
+columns = ["letter","number"]
+data = [(l, n) for l, n in zip("abcdefghijklmnopqrstuvwxyz", "12345678912345678912345678")]
+rdd = spark.sparkContext.parallelize(data)
+df = rdd.toDF(columns)
+```
 ### Drop Columns from Spark DataFrame
 
 `df = df.drop("query_type").drop("_c0").drop("_c01")`
