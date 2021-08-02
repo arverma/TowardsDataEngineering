@@ -62,8 +62,13 @@ if RDD
 `df.filter(lower(col("_c0")).contains('%string_to_find%')).head()`
 
 ### Get max/min/mean value for a column
-
-`max_value = df.agg({"_c0": “max”}).collect()[0]`
+```
+max_value = df.agg({"_c0": “max”}).collect()[0]
+mean_value = df.agg({"_c0": “mean”}).collect()[0]
+min_value = df.agg({"_c0": “min”}).collect()[0]
+df.select("_c0").rdd.min()[0]
+df.select("_c0").rdd.max()[0]
+```
 
 ### Spark Configuration
 In a cluster with 10 nodes with each node(16 cores and 64GB RAM)
