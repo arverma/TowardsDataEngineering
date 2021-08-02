@@ -63,3 +63,51 @@ In a cluster with 10 nodes with each node(16 cores and 64GB RAM)
 * Number of executors per node = 30/10 = 3
 * Memory per executor = 64GB/3 = 21GB
 * Counting off heap overhead = 7% of 21GB = 3GB. So, actual --executor-memory = 21 - 3 = 18GB
+
+### Setup Colab to run PySpark
+1. As a first step, Let's setup Spark on your Colab environment. Run the cell below!
+```[Python]
+  !pip install pyspark
+  !pip install -U -q PyDrive
+  !apt install openjdk-8-jdk-headless -qq
+  import os
+  os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-8-openjdk-amd64"
+```
+2. Import some of the libraries usually needed by our workload.
+```[Python]
+  import pyspark
+  from pyspark.sql import *
+  from pyspark.sql.types import *
+  from pyspark.sql.functions import *
+  from pyspark import SparkContext, SparkConf
+```
+3. Initialize the Spark context, 
+```[Python]
+  # Create the session
+  conf = SparkConf().set("spark.ui.port", "4050")
+
+  # Create the context
+  sc = pyspark.SparkContext(conf=conf)
+  spark = SparkSession.builder.getOrCreate()
+
+  spark
+```
+4. If you are running this Colab on the Google hosted runtime, the cell below will create a ngrok tunnel which will allow you to still check the Spark UI.
+```[Python]
+  !wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+  ! rm -rf ngrok
+  !unzip ngrok-stable-linux-amd64.zip
+  get_ipython().system_raw('./ngrok http 4050 &')
+  !curl -s http://localhost:4040/api/tunnels | python3 -c \
+      "import sys, json; print(json.load(sys.stdin)['tunnels'][0]['public_url'])"
+```
+5. Test Spark installation
+```[Python]
+  import pyspark
+  print(pyspark.__version__)
+  spark = SparkSession.builder.master("local[*]").getOrCreate()
+  # Test the spark 
+  df = spark.createDataFrame([{"hello": "world"} for x in range(1000)])
+
+  df.show(3, False)
+```
