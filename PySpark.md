@@ -69,6 +69,12 @@ min_value = df.agg({"_c0": “min”}).collect()[0]
 df.select("_c0").rdd.min()[0]
 df.select("_c0").rdd.max()[0]
 ```
+### Arithmetic Operation on Columns (-, +, %, /)
+```
+df = df.withColumn("new_col", df._c0 * df._c1)
+df = df.withColumn("new_col", df._c0 + 100)
+df = df.withColumn("new_col", df._c0 + lit(100))
+```
 
 ### Spark Configuration
 In a cluster with 10 nodes with each node(16 cores and 64GB RAM)
