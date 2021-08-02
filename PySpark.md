@@ -69,7 +69,7 @@ min_value = df.agg({"_c0": “min”}).collect()[0]
 df.select("_c0").rdd.min()[0]
 df.select("_c0").rdd.max()[0]
 ```
-### Arithmetic Operation on Columns (-, +, %, /)
+### Arithmetic Operation on Columns (-, +, %, /, **)
 ```
 df = df.withColumn("new_col", df._c0 * df._c1)
 df = df.withColumn("new_col", df._c0 + 100)
