@@ -17,6 +17,7 @@
 14) [Moves the cursor to the end of the line](#moveCursorToTheEndOfLine)
 15) [Run previous ran command](#runPreviousCommand)
 16) [Find word in a file](#findWordInAFile)
+17) [Get 1st N rows from a file](#get1stNrows)
 
 #### <a name="runAJobInBack"></a> Run a job in background on Linux
 
@@ -137,5 +138,10 @@ $ !!
 #### <a name="findWordInAFile"></a> Find word in a file
 ```bash
 $ grep <wordYouWantToFind> <fileName.txt>
+```
+
+#### <a name="get1stNrows"></a> Get 1st N rows from a file
+```bash
+!head -5 file_name.csv
 ```
 

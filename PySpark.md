@@ -10,6 +10,18 @@ rdd = spark.sparkContext.parallelize(data)
 df = rdd.toDF(columns)
 ```
 
+### Read csv file in Spark with Schema Inference
+```
+df = spark.read.csv("file_path/file_name.csv", header=True, inferSchema=True)
+```
+
+### Run SQL Query on Spark DF
+```
+df.createOrReplaceTempView("table_name")
+df_new = spark.sql("Select * from table_name")
+df_new.show()
+```
+
 ### Get number of partitions
 ```
 if dataframe:
@@ -20,7 +32,7 @@ if RDD
 
 ### Repartition dataframe into "n" partitions
 * Partitions has unequal distribution of data(Fast since less suffeling, cann't increase number of partitions) = `df.coalesce(n)`
-* Partitoins has euqal distribution of data(Slow since more suffeling) = `df.repartition(n)`
+* Partitoins has equal distribution of data(Slow since more suffeling) = `df.repartition(n)`
 
 ### Drop Columns from Spark DataFrame
 
@@ -50,8 +62,19 @@ if RDD
 `df.filter(lower(col("_c0")).contains('%string_to_find%')).head()`
 
 ### Get max/min/mean value for a column
-
-`max_value = df.agg({"_c0": “max”}).collect()[0]`
+```
+max_value = df.agg({"_c0": “max”}).collect()[0]
+mean_value = df.agg({"_c0": “mean”}).collect()[0]
+min_value = df.agg({"_c0": “min”}).collect()[0]
+df.select("_c0").rdd.min()[0]
+df.select("_c0").rdd.max()[0]
+```
+### Arithmetic Operation on Columns (-, +, %, /, **)
+```
+df = df.withColumn("new_col", df._c0 * df._c1)
+df = df.withColumn("new_col", df._c0 + 100)
+df = df.withColumn("new_col", df._c0 + lit(100))
+```
 
 ### Spark Configuration
 In a cluster with 10 nodes with each node(16 cores and 64GB RAM)
@@ -63,3 +86,51 @@ In a cluster with 10 nodes with each node(16 cores and 64GB RAM)
 * Number of executors per node = 30/10 = 3
 * Memory per executor = 64GB/3 = 21GB
 * Counting off heap overhead = 7% of 21GB = 3GB. So, actual --executor-memory = 21 - 3 = 18GB
+
+### Setup Colab to run PySpark
+1. As a first step, Let's setup Spark on your Colab environment. Run the cell below!
+```[Python]
+  !pip install pyspark
+  !pip install -U -q PyDrive
+  !apt install openjdk-8-jdk-headless -qq
+  import os
+  os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-8-openjdk-amd64"
+```
+2. Import some of the libraries usually needed by our workload.
+```[Python]
+  import pyspark
+  from pyspark.sql import *
+  from pyspark.sql.types import *
+  from pyspark.sql.functions import *
+  from pyspark import SparkContext, SparkConf
+```
+3. Initialize the Spark context, 
+```[Python]
+  # Create the session
+  conf = SparkConf().set("spark.ui.port", "4050")
+
+  # Create the context
+  sc = pyspark.SparkContext(conf=conf)
+  spark = SparkSession.builder.getOrCreate()
+
+  spark
+```
+4. If you are running this Colab on the Google hosted runtime, the cell below will create a ngrok tunnel which will allow you to still check the Spark UI.
+```[Python]
+  !wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+  ! rm -rf ngrok
+  !unzip ngrok-stable-linux-amd64.zip
+  get_ipython().system_raw('./ngrok http 4050 &')
+  !curl -s http://localhost:4040/api/tunnels | python3 -c \
+      "import sys, json; print(json.load(sys.stdin)['tunnels'][0]['public_url'])"
+```
+5. Test Spark installation
+```[Python]
+  import pyspark
+  print(pyspark.__version__)
+  spark = SparkSession.builder.master("local[*]").getOrCreate()
+  # Test the spark 
+  df = spark.createDataFrame([{"hello": "world"} for x in range(1000)])
+
+  df.show(3, False)
+```
