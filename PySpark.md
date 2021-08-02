@@ -10,6 +10,13 @@ rdd = spark.sparkContext.parallelize(data)
 df = rdd.toDF(columns)
 ```
 
+### Run SQL Query on Spark DF
+```
+df.createOrReplaceTempView("table_name")
+df_new = spark.sql("Select * from table_name")
+df_new.show()
+```
+
 ### Get number of partitions
 ```
 if dataframe:
@@ -20,7 +27,7 @@ if RDD
 
 ### Repartition dataframe into "n" partitions
 * Partitions has unequal distribution of data(Fast since less suffeling, cann't increase number of partitions) = `df.coalesce(n)`
-* Partitoins has euqal distribution of data(Slow since more suffeling) = `df.repartition(n)`
+* Partitoins has equal distribution of data(Slow since more suffeling) = `df.repartition(n)`
 
 ### Drop Columns from Spark DataFrame
 
