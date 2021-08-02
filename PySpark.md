@@ -10,6 +10,11 @@ rdd = spark.sparkContext.parallelize(data)
 df = rdd.toDF(columns)
 ```
 
+### Read csv file in Spark with Schema Inference
+```
+df = spark.read.csv("file_path/file_name.csv", header=True, inferSchema=True)
+```
+
 ### Run SQL Query on Spark DF
 ```
 df.createOrReplaceTempView("table_name")
