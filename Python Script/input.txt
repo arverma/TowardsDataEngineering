@@ -1,0 +1,15 @@
+-rw-r--r--   3 aman.rv hdfs    229.0 M 2021-11-17 19:04 /cremo_datasets/dataset-repository/customer_features/DS5660.1.0/part-00953-42209ac4-c0e4-46ba-a0ab-dc3bb90081ec-c000.snappy.parquet
+-rw-r--r--   3 aman.rv hdfs    228.2 M 2021-11-17 19:04 /cremo_datasets/dataset-repository/customer_features/DS5660.1.0/part-00954-42209ac4-c0e4-46ba-a0ab-dc3bb90081ec-c000.snappy.parquet
+-rw-r--r--   3 aman.rv hdfs    229.1 M 2021-11-17 19:06 /cremo_datasets/dataset-repository/customer_features/DS5660.1.0/part-00955-42209ac4-c0e4-46ba-a0ab-dc3bb90081ec-c000.snappy.parquet
+-rw-r--r--   3 aman.rv hdfs    228.0 M 2021-11-17 19:06 /cremo_datasets/dataset-repository/customer_features/DS5660.1.0/part-00956-42209ac4-c0e4-46ba-a0ab-dc3bb90081ec-c000.snappy.parquet
+-rw-r--r--   3 aman.rv hdfs    228.6 M 2021-11-17 20:08 /cremo_datasets/dataset-repository/customer_features/DS5660.1.0/part-01295-42209ac4-c0e4-46ba-a0ab-dc3bb90081ec-c000.snappy.parquet
+-rw-r--r--   3 aman.rv hdfs    229.3 M 2021-11-17 20:08 /cremo_datasets/dataset-repository/customer_features/DS5660.1.0/part-01296-42209ac4-c0e4-46ba-a0ab-dc3bb90081ec-c000.snappy.parquet
+-rw-r--r--   3 aman.rv hdfs    229.9 M 2021-11-17 20:09 /cremo_datasets/dataset-repository/customer_features/DS5660.1.0/part-01297-42209ac4-c0e4-46ba-a0ab-dc3bb90081ec-c000.snappy.parquet
+-rw-r--r--   3 aman.rv hdfs    228.2 M 2021-11-17 20:08 /cremo_datasets/dataset-repository/customer_features/DS5660.1.0/part-01298-42209ac4-c0e4-46ba-a0ab-dc3bb90081ec-c000.snappy.parquet
+-rw-r--r--   3 aman.rv hdfs    229.0 M 2021-11-17 20:08 /cremo_datasets/dataset-repository/customer_features/DS5660.1.0/part-01299-42209ac4-c0e4-46ba-a0ab-dc3bb90081ec-c000.snappy.parquet
+-rw-r--r--   3 aman.rv hdfs    229.1 M 2021-11-17 20:08 /cremo_datasets/dataset-repository/customer_features/DS5660.1.0/part-01300-42209ac4-c0e4-46ba-a0ab-dc3bb90081ec-c000.snappy.parquet
+-rw-r--r--   3 aman.rv hdfs    229.0 M 2021-11-17 20:09 /cremo_datasets/dataset-repository/customer_features/DS5660.1.0/part-01301-42209ac4-c0e4-46ba-a0ab-dc3bb90081ec-c000.snappy.parquet
+-rw-r--r--   3 aman.rv hdfs    228.3 M 2021-11-17 20:09 /cremo_datasets/dataset-repository/customer_features/DS5660.1.0/part-01302-42209ac4-c0e4-46ba-a0ab-dc3bb90081ec-c000.snappy.parquet
+-rw-r--r--   3 aman.rv hdfs    228.2 M 2021-11-17 20:10 /cremo_datasets/dataset-repository/customer_features/DS5660.1.0/part-01303-42209ac4-c0e4-46ba-a0ab-dc3bb90081ec-c000.snappy.parquet
+-rw-r--r--   3 aman.rv hdfs    228.8 M 2021-11-17 20:11 /cremo_datasets/dataset-repository/customer_features/DS5660.1.0/part-01304-42209ac4-c0e4-46ba-a0ab-dc3bb90081ec-c000.snappy.parquet
+-rw-r--r--   3 aman.rv hdfs    230.2 M 2021-11-17 20:11 /cremo_datasets/dataset-repository/customer_features/DS5660.1.0/part-01305-42209ac4-c0e4-46ba-a0ab-dc3bb90081ec-c000.snappy.parquet
