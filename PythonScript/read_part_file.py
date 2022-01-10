@@ -6,3 +6,5 @@ for i in range(162):
     temp = rdd.count()
     print(temp)
     count += temp
+
+

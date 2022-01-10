@@ -79,4 +79,4 @@ At first glance, resetting might seem coincidentally close to reverting, but the
 Before I do any resetting, I usually create a backup branch on the most-recent commit so that I can get back to the commits if I make a mistake.
 
 ### Change the git upstream url from SSH to HTTPS or back
-`$ git remote set-url origin git@github.fkinternal.com:Flipkart/siso-analysis.git`
+`$ git remote set-url origin git@github.......url`
