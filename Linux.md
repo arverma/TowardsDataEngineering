@@ -27,6 +27,7 @@ $ nohup command > my.log 2>&1 &
 
 #### Check disk usage for directory
 ```bash
+$ sudo du -h --max-depth=1  | sort -h
 $ sudo du -h --max-depth=4 ./log | sort -h
 ```
 #### <a name="tar"></a> tar

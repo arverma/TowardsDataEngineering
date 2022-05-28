@@ -11,6 +11,11 @@
 7) [Read file from Gitlab private repo](Python%20Script/read_from_gitlab.py)
 8) [Read parquet file](Python%20Script/read_parquet_file.py)
 
+### Create a server
+```bash
+python3 -m http.server 8000
+```
+
 ### <a name="checkYourPythonVersion"></a> Check your Python version
 ```bash
 $ python3 -V

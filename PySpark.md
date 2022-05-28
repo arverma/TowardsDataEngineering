@@ -65,9 +65,9 @@ if RDD
 
 ### Get max/min/mean value for a column
 ```
-max_value = df.agg({"_c0": “max”}).collect()[0]
-mean_value = df.agg({"_c0": “mean”}).collect()[0]
-min_value = df.agg({"_c0": “min”}).collect()[0]
+max_value = df.agg({"_c0": "max"}).collect()[0]
+mean_value = df.agg({"_c0": "mean"}).collect()[0]
+min_value = df.agg({"_c0": "min"}).collect()[0]
 df.select("_c0").rdd.min()[0]
 df.select("_c0").rdd.max()[0]
 ```
