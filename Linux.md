@@ -22,14 +22,18 @@
 #### <a name="runAJobInBack"></a> Run a job in background on Linux
 
 ```bash
-$ nohup command > my.log 2>&1 &`
+$ nohup command > my.log 2>&1 &
 ```
 
+#### Check disk usage for directory
+```bash
+$ sudo du -h --max-depth=4 ./log | sort -h
+```
 #### <a name="tar"></a> tar
 
 * Create a tar archive
     ```bash
-    tar -cvf <file_name.tar> <file1> <file2>
+    $ tar -cvf <file_name.tar> <file1> <file2>
     ```
     * -c - create
     * -v - verbose
@@ -37,7 +41,7 @@ $ nohup command > my.log 2>&1 &`
 
 * Extract tar archives
     ```bash
-    tar -xvf <file_name.tar>
+    $ tar -xvf <file_name.tar>
     ```
     * -x - extract
     * -v - verbose
@@ -45,7 +49,7 @@ $ nohup command > my.log 2>&1 &`
 
 * Create archives and compress with tar
     ```bash
-    tar -czvf <file_name.tar.gz> <file1> <file2>`
+    $ tar -czvf <file_name.tar.gz> <file1> <file2>`
     ```
     * -c - create
     * -z - zip
@@ -54,7 +58,7 @@ $ nohup command > my.log 2>&1 &`
 
 *  Uncompress using tar
     ```bash
-    tar -xzvf <file_name.tar.gz>
+    $ tar -xzvf <file_name.tar.gz>
     ```
 
     * -xz - uncompress and extract

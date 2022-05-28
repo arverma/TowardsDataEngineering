@@ -1,5 +1,7 @@
 # PySpark
 
+[PySpark Examples Official Doc link](https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql.html)
+
 ### Create Dataframe
 ```
 spark = SparkSession.builder.appName('SparkByExamples.com').getOrCreate()
