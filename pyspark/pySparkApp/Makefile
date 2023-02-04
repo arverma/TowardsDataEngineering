@@ -6,4 +6,4 @@ build_zip:
 	mkdir -p dist/
 	rsync -av foo dist/
 	cd dist ; zip -r foo.zip . * ; cd ..
-	rm -fr dist/foo
+	#rm -fr dist/foo
